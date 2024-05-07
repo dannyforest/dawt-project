@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import './App.css';
-
 
 function App() {
   const [guess, setGuess] = useState('');
   const [randomNumber, setRandomNumber] = useState(generateRandomNumber());
   const [message, setMessage] = useState('');
+  const [attempts, setAttempts] = useState(0);
 
   function generateRandomNumber() {
     return Math.floor(Math.random() * 100) + 1;
@@ -21,12 +20,15 @@ function App() {
     if (isNaN(userGuess)) {
       setMessage('Veuillez entrer un nombre valide.');
     } else if (userGuess === randomNumber) {
-      setMessage('Bravo ! Vous avez deviné le nombre.');
+      setMessage(`Bravo ! Vous avez deviné le nombre en ${attempts + 1} essais.`);
       setRandomNumber(generateRandomNumber());
+      setAttempts(0);
     } else if (userGuess < randomNumber) {
       setMessage('Le nombre à deviner est plus grand.');
+      setAttempts(attempts + 1);
     } else {
       setMessage('Le nombre à deviner est plus petit.');
+      setAttempts(attempts + 1);
     }
     setGuess('');
   };
@@ -35,6 +37,7 @@ function App() {
       <div>
         <h1>Jeu de devinette</h1>
         <p>{message}</p>
+        <p>Nombre d'essais : {attempts}</p>
         <form onSubmit={handleSubmit}>
           <input
               type="number"
