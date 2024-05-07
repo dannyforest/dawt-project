@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import './App.css';
-
 
 function App() {
   const [guess, setGuess] = useState('');
-  const [randomNumber, setRandomNumber] = useState(Math.floor(Math.random() * 100) + 1);
+  const [randomNumber, setRandomNumber] = useState(generateRandomNumber());
   const [message, setMessage] = useState('');
+
+  function generateRandomNumber() {
+    return Math.floor(Math.random() * 100) + 1;
+  }
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setGuess(event.target.value);
@@ -18,6 +20,7 @@ function App() {
       setMessage('Veuillez entrer un nombre valide.');
     } else if (userGuess === randomNumber) {
       setMessage('Bravo ! Vous avez deviné le nombre.');
+      setRandomNumber(generateRandomNumber());
     } else if (userGuess < randomNumber) {
       setMessage('Le nombre à deviner est plus grand.');
     } else {
