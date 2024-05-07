@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const IntegerComponent = (number: number) => {
+export const IntegerComponent = (num: any) => {
     return (
         <>
-			 {number}
+			 {num}
         </>
     )
 }

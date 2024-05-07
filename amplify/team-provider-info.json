@@ -15,7 +15,7 @@
       "function": {
         "randomIntegersGenerator": {
           "deploymentBucketName": "amplify-dawtproject-alexis-4392b-deployment",
-          "s3Key": "amplify-builds/randomIntegersGenerator-41384f6e755478494463-build.zip"
+          "s3Key": "amplify-builds/randomIntegersGenerator-554770597444315a686a-build.zip"
         }
       }
     }

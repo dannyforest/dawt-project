@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import { IntegerComponent } from './components/integer';
 
 function App() {
   const [integers, setIntegers] = useState([]);
@@ -14,7 +15,9 @@ function App() {
 }, []);
   return (
     <div className="App">
-      {integers}
+      {integers.map((integer: number) => {
+        return <IntegerComponent num={integer} />
+      })}
     </div>
   );
 }
