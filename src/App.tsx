@@ -9,9 +9,8 @@ function App() {
       const response = await fetch('https://zvix7nopmcsvlbommwnl3zx74y0wzsxg.lambda-url.us-east-1.on.aws/');
       const data = await response.json();
       console.log(data);
-      console.log(JSON.parse(data));
       console.log(data.integers);
-      console.log(JSON.parse(data.integers));
+      console.log(typeof data.integers);
       setIntegers(data.integers)
     }
     fetchAndSetIntegers();
