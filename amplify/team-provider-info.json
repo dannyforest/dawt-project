@@ -1,4 +1,25 @@
 {
+  "nabila": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-dawtproject-nabila-98b69-authRole",
+      "UnauthRoleArn": "arn:aws:iam::381492272245:role/amplify-dawtproject-nabila-98b69-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::381492272245:role/amplify-dawtproject-nabila-98b69-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-dawtproject-nabila-98b69-deployment",
+      "UnauthRoleName": "amplify-dawtproject-nabila-98b69-unauthRole",
+      "StackName": "amplify-dawtproject-nabila-98b69",
+      "StackId": "arn:aws:cloudformation:us-east-1:381492272245:stack/amplify-dawtproject-nabila-98b69/9dd2ed30-0c83-11ef-9c49-0e0a02b334cb",
+      "AmplifyAppId": "d3fxeici0k302w"
+    },
+    "categories": {
+      "api": {
+        "dawtproject": {}
+      },
+      "function": {
+        "classproject": {}
+      }
+    }
+  },
   "dev": {
     "awscloudformation": {
       "AuthRoleName": "amplify-dawtproject-dev-74922-authRole",
