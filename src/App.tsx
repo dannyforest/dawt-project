@@ -40,7 +40,6 @@ function App() {
     setGuess('');
   };
 
-  // Trie le leaderboard par ordre croissant du nombre d'essais
   leaderboard.sort((a, b) => a.attempts - b.attempts);
 
   return (
