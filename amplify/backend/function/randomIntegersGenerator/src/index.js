@@ -18,6 +18,6 @@ exports.handler = async (event) => {
          "Access-Control-Allow-Headers": "*"
          },
         //json string with random integers
-        body: JSON.stringify(`"integers": [${randomIntegers.toString()}]`),
+        body: JSON.stringify(randomIntegers),
     };
 };
