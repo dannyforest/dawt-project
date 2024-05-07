@@ -1,4 +1,25 @@
 {
+  "mike": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-dawtproject-mike-7886d-authRole",
+      "UnauthRoleArn": "arn:aws:iam::381492272245:role/amplify-dawtproject-mike-7886d-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::381492272245:role/amplify-dawtproject-mike-7886d-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-dawtproject-mike-7886d-deployment",
+      "UnauthRoleName": "amplify-dawtproject-mike-7886d-unauthRole",
+      "StackName": "amplify-dawtproject-mike-7886d",
+      "StackId": "arn:aws:cloudformation:us-east-1:381492272245:stack/amplify-dawtproject-mike-7886d/69c1d580-0c81-11ef-a85a-12950066a4a7",
+      "AmplifyAppId": "d3fxeici0k302w"
+    },
+    "categories": {
+      "api": {
+        "dawtproject": {}
+      },
+      "function": {
+        "dawtproject": {}
+      }
+    }
+  },
   "dev": {
     "awscloudformation": {
       "AuthRoleName": "amplify-dawtproject-dev-74922-authRole",
