@@ -1,4 +1,17 @@
 {
+  "felix": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-dawtproject-felix-daa9c-authRole",
+      "UnauthRoleArn": "arn:aws:iam::381492272245:role/amplify-dawtproject-felix-daa9c-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::381492272245:role/amplify-dawtproject-felix-daa9c-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-dawtproject-felix-daa9c-deployment",
+      "UnauthRoleName": "amplify-dawtproject-felix-daa9c-unauthRole",
+      "StackName": "amplify-dawtproject-felix-daa9c",
+      "StackId": "arn:aws:cloudformation:us-east-1:381492272245:stack/amplify-dawtproject-felix-daa9c/aef44d70-0c83-11ef-b5b3-0ea4e912a2b3",
+      "AmplifyAppId": "d3fxeici0k302w"
+    }
+  },
   "dev": {
     "awscloudformation": {
       "AuthRoleName": "amplify-dawtproject-dev-74922-authRole",

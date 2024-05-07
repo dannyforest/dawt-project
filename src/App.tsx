@@ -1,25 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
 function App() {
+  const [guess, setGuess] = useState('');
+  const [randomNumber, setRandomNumber] = useState(Math.floor(Math.random() * 100) + 1);
+  const [message, setMessage] = useState('');
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setGuess(event.target.value);
+  };
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const userGuess = parseInt(guess, 10);
+    if (isNaN(userGuess)) {
+      setMessage('Veuillez entrer un nombre valide.');
+    } else if (userGuess === randomNumber) {
+      setMessage('Bravo ! Vous avez deviné le nombre.');
+    } else if (userGuess < randomNumber) {
+      setMessage('Le nombre à deviner est plus grand.');
+    } else {
+      setMessage('Le nombre à deviner est plus petit.');
+    }
+    setGuess('');
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+        <h1>Jeu de devinette</h1>
+        <p>{message}</p>
+        <form onSubmit={handleSubmit}>
+          <input
+              type="number"
+              value={guess}
+              onChange={handleChange}
+              min="1"
+              max="100"
+              required
+          />
+          <button type="submit">Devinez</button>
+        </form>
+      </div>
   );
 }
 
