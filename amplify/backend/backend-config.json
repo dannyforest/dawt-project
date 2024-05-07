@@ -1,1 +1,28 @@
-{}
+{
+  "function": {
+    "randomIntegersGenerator": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_randomIntegersGenerator_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "randomIntegersGenerator"
+        }
+      ]
+    },
+    "AMPLIFY_function_randomIntegersGenerator_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "randomIntegersGenerator"
+        }
+      ]
+    }
+  }
+}

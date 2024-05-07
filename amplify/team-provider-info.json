@@ -10,6 +10,14 @@
       "StackName": "amplify-dawtproject-alexis-4392b",
       "StackId": "arn:aws:cloudformation:us-east-1:381492272245:stack/amplify-dawtproject-alexis-4392b/7dd8a800-0c81-11ef-8c26-0affc96c13ab",
       "AmplifyAppId": "d3fxeici0k302w"
+    },
+    "categories": {
+      "function": {
+        "randomIntegersGenerator": {
+          "deploymentBucketName": "amplify-dawtproject-alexis-4392b-deployment",
+          "s3Key": "amplify-builds/randomIntegersGenerator-41384f6e755478494463-build.zip"
+        }
+      }
     }
   },
   "dev": {

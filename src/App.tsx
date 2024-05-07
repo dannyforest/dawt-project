@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
+  const [integers, setIntegers] = useState([]);
+  useEffect(() => {
+    const fetchAndSetIntegers = async () => {
+      const response = await fetch('https://zvix7nopmcsvlbommwnl3zx74y0wzsxg.lambda-url.us-east-1.on.aws/');
+      const data = await response.json();
+      console.log(data);
+      setIntegers(data.integers)
+    }
+    fetchAndSetIntegers();
+}, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {integers}
     </div>
   );
 }
